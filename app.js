@@ -16,7 +16,10 @@ const auth = require("./middlewares/auth.js");
 
 mongoose.connect(process.env.MONGO_URI);
 
-const allowedCors = ["http://localhost:3000/", "http://localhost:3000"];
+const allowedCors = [
+  "https://clinicadelangel.mooo.com",
+  "https://www.clinicadelangel.mooo.com",
+];
 app.use(cors({ origin: allowedCors }));
 
 app.use(express.json());
